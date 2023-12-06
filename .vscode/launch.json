@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-PetstoreApplication<petstore>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.itv.petstore.PetstoreApplication",
+            "projectName": "petstore",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
