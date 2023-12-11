@@ -1,6 +1,7 @@
 package com.itv.petstore.services;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import java.util.concurrent.atomic.AtomicInteger;
@@ -31,4 +32,21 @@ private UserRepository repository;
         repository.save(user);
         return user;
     }
+    public List<User> getAll() {
+        return repository.findAll();
+       }
+     public User getById(Integer id){
+        return repository.findById(id).orElse(null);
+     }  
+     public void deleteuser(Integer id) 
+     {
+        repository.deleteById(id);
+        
+}
+    public User updateUser(Integer id,User user)
+        {
+            user.setId(id);
+            return repository.save(user);
+        }
+
 }
